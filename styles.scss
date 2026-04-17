@@ -15,12 +15,14 @@ body {
   }
 }
 
+//navigation bar
 .navBar {
   font-size: 23px;
-  padding-top: 10px;
+  padding-top: 1.5rem;
   text-decoration: none;
   display: flex;
   justify-content: end;
+  font-size: 0.9rem;
 
   @include media.phone {
     visibility: hidden;
@@ -33,7 +35,11 @@ body {
       padding: 14px 20px;
       border: 2px solid black;
       border-radius: 15%;
+      text-decoration: none;
     }
+  }
+  div {
+    font-weight: 600;
   }
 }
 
@@ -42,7 +48,7 @@ h2 {
     text-align: center;
   }
 }
-
+//image in the header
 .imgHeader {
   height: 200px;
   width: 200px;
@@ -53,10 +59,10 @@ h2 {
     display: none;
   }
 }
-
+//About Section
 .secAbout {
   @include media.laptop {
-    borer: 2px solid black;
+    border: 2px solid black;
   }
 }
 
@@ -65,22 +71,24 @@ h4 {
     text-align: left;
   }
 }
-
+//Photo of me !!! : D
 .imgMe {
   @include media.laptop {
     float: left;
     padding-right: 5%;
   }
 }
-
-.technicalLogo {
+//Technical skills logo
+.technicalLogos {
   width: 80px;
   height: 80px;
-
+  display: flex;
+  flex-direction: row;
   img {
     @include media.laptop {
       margin: auto;
       width: 50%;
+      align-items: center;
     }
   }
 }
@@ -104,8 +112,10 @@ ul {
 
 .secprojects {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 10px;
+  gap: 10px 20px;
+  row-gap: 10px;
+  column-gap: 20px;
 
   li {
     text-align: center;
