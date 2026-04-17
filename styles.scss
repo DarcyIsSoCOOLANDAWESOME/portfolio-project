@@ -62,7 +62,6 @@ h2 {
 //About Section
 .secAbout {
   @include media.laptop {
-    border: 2px solid black;
   }
 }
 
@@ -73,36 +72,41 @@ h4 {
 }
 //Photo of me !!! : D
 .imgMe {
+  border-radius: 10%;
   @include media.laptop {
     float: left;
-    padding-right: 5%;
+    padding-right: 3%;
   }
 }
 //Technical skills logo
 .technicalLogos {
   width: 80px;
   height: 80px;
-  display: flex;
-  flex-direction: row;
+  align-items: center;
+  display: inline-block;
+  overflow: hidden;
+
   img {
     @include media.laptop {
       margin: auto;
       width: 50%;
       align-items: center;
+      justify-content: end;
     }
   }
 }
 
-.secTechnicalSkills {
-  p {
-    padding-left: 10px;
-  }
-}
+// .secTechnicalSkills {
+//   p {
+
+//   }
+// }
 
 button {
   background-color: white;
   border: 2px solid grey;
-  border-radius: 10%;
+  border-radius: 15%;
+  font-weight: 700;
 }
 
 ul {
@@ -111,18 +115,14 @@ ul {
 }
 
 .secprojects {
-  display: flex;
-  gap: 10px;
-  gap: 10px 20px;
-  row-gap: 10px;
-  column-gap: 20px;
-
   li {
     text-align: center;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border: 2px solid black;
-    background-color: blueviolet;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: row;
   }
 
   button {
@@ -137,11 +137,13 @@ ul {
     margin: 0;
     padding: 0;
   }
+  @include media.phone {
+  }
 
   @include media.laptop {
-    flex-direction: column;
-    justify-content: flex-start;
     max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
