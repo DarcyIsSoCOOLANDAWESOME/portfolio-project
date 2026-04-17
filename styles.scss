@@ -15,6 +15,10 @@ body {
   }
 }
 
+* {
+  text-align: center;
+}
+
 //navigation bar
 .navBar {
   font-size: 23px;
@@ -61,6 +65,10 @@ h2 {
 }
 //About Section
 .secAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include media.laptop {
   }
 }
@@ -75,7 +83,6 @@ h4 {
   border-radius: 10%;
   @include media.laptop {
     float: left;
-    padding-right: 3%;
   }
 }
 //Technical skills logo
@@ -112,17 +119,22 @@ button {
 ul {
   list-style: none;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .secprojects {
+  width: 80vw;
+
+  margin: 0 auto;
   li {
-    text-align: center;
     width: 300px;
     height: 300px;
     border: 2px solid black;
     border-radius: 10%;
-    display: flex;
-    flex-direction: row;
   }
 
   button {
