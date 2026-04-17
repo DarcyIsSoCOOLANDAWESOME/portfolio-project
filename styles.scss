@@ -29,7 +29,7 @@ body {
   font-size: 0.9rem;
 
   @include media.phone {
-    visibility: hidden;
+    // visibility: hidden;
     display: none;
   }
 
@@ -47,11 +47,6 @@ body {
   }
 }
 
-h2 {
-  @include media.laptop {
-    text-align: center;
-  }
-}
 //image in the header
 .imgHeader {
   height: 200px;
@@ -69,13 +64,28 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @include media.laptop {
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+  }
+  h2 {
+    @include media.laptop {
+      color: red;
+    }
   }
 }
-
+h1 {
+  @include media.laptop {
+    text-align: left;
+    margin-left: 3%;
+  }
+}
 h4 {
   @include media.laptop {
     text-align: left;
+    margin-left: 3%;
   }
 }
 //Photo of me !!! : D
@@ -83,6 +93,14 @@ h4 {
   border-radius: 10%;
   @include media.laptop {
     float: left;
+  }
+}
+
+.secTechnicalSkills {
+  h2 {
+    @include media.laptop {
+      text-align: center;
+    }
   }
 }
 //Technical skills logo
@@ -116,7 +134,7 @@ button {
   font-weight: 700;
 }
 
-ul {
+.secprojects ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -124,11 +142,16 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  //   @include media.laptop {
+  //     display: flex;
+  //     justify-content: left;
+  //     align-items: left;
+  //   }
 }
 
 .secprojects {
   width: 80vw;
-
   margin: 0 auto;
   li {
     width: 300px;
@@ -141,24 +164,28 @@ ul {
     margin-inline: 20px;
     margin-bottom: 5%;
   }
+
   h5 {
     margin: 0;
     padding: 0;
   }
+
   h3 {
     margin: 0;
     padding: 0;
   }
-  @include media.phone {
+  h2 {
+    @include media.laptop {
+      text-align: center;
+    }
   }
 
   @include media.laptop {
     max-width: 50%;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
+//FOOTER STUFF!!!
 .footer {
   height: 10rem;
   background-color: black;

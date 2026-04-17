@@ -36,7 +36,6 @@ body {
 }
 @media only screen and (max-width: 640px) {
   .navBar {
-    visibility: hidden;
     display: none;
   }
 }
@@ -51,12 +50,6 @@ body {
 }
 .navBar div {
   font-weight: 600;
-}
-
-@media only screen and (min-width: 641px) {
-  h2 {
-    text-align: center;
-  }
 }
 
 .imgHeader {
@@ -78,8 +71,29 @@ body {
   align-items: center;
 }
 @media only screen and (min-width: 641px) {
+  .secAbout {
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .secAbout h2 {
+    color: red;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  h1 {
+    text-align: left;
+    margin-left: 3%;
+  }
+}
+
+@media only screen and (min-width: 641px) {
   h4 {
     text-align: left;
+    margin-left: 3%;
   }
 }
 
@@ -89,6 +103,12 @@ body {
 @media only screen and (min-width: 641px) {
   .imgMe {
     float: left;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .secTechnicalSkills h2 {
+    text-align: center;
   }
 }
 
@@ -115,7 +135,7 @@ button {
   font-weight: 700;
 }
 
-ul {
+.secprojects ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -148,10 +168,13 @@ ul {
   padding: 0;
 }
 @media only screen and (min-width: 641px) {
+  .secprojects h2 {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 641px) {
   .secprojects {
     max-width: 50%;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
