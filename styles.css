@@ -26,12 +26,18 @@ body {
   text-align: center;
 }
 
+.navName {
+  text-align: start;
+}
+
 .navBar {
   font-size: 23px;
   padding-top: 1.5rem;
   text-decoration: none;
+  font-weight: 600;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.9rem;
 }
 @media only screen and (max-width: 640px) {
@@ -43,9 +49,7 @@ body {
   display: inline;
 }
 .navBar li a {
-  padding: 14px 20px;
-  border: 2px solid black;
-  border-radius: 15%;
+  padding: 0.4rem 1rem;
   text-decoration: none;
 }
 .navBar div {
@@ -64,6 +68,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 641px) {
+  .secDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+  }
+}
+
 .secAbout {
   display: flex;
   flex-direction: column;
@@ -72,7 +85,7 @@ body {
 }
 @media only screen and (min-width: 641px) {
   .secAbout {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
     align-items: left;
   }
@@ -131,11 +144,11 @@ body {
 button {
   background-color: white;
   border: 2px solid grey;
-  border-radius: 15%;
+  border-radius: 10%;
   font-weight: 700;
 }
 
-.secProjects ul {
+.secProjects {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -152,11 +165,10 @@ button {
 .secProjects {
   width: 80vw;
   margin: 0 auto;
-  border: 2px solid red;
 }
-.secProjects li {
-  width: 5vw;
-  height: 5vw;
+.secProjects img {
+  width: 20vw;
+  height: 20vw;
   border: 2px solid black;
   border-radius: 10%;
 }
@@ -204,9 +216,10 @@ button {
   width: 50%;
 }
 .footer .icons img {
-  height: 50px;
-  width: 50px;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
+  object-fit: fill;
 }
 .footer .email {
   margin: auto;

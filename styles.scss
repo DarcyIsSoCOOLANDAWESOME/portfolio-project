@@ -19,13 +19,19 @@ body {
   text-align: center;
 }
 
+.navName {
+  text-align: start;
+}
+
 //navigation bar
 .navBar {
   font-size: 23px;
   padding-top: 1.5rem;
   text-decoration: none;
+  font-weight: 600;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.9rem;
 
   @include media.phone {
@@ -36,15 +42,16 @@ body {
   li {
     display: inline;
     a {
-      padding: 14px 20px;
-      border: 2px solid black;
-      border-radius: 15%;
+      padding: 0.4rem 1rem;
       text-decoration: none;
     }
   }
   div {
     font-weight: 600;
   }
+  //   a :hover {
+  //     color: red;
+  //   }
 }
 
 //image in the header
@@ -60,6 +67,15 @@ body {
 }
 
 //About Section
+.secDiv {
+  @include media.laptop {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+  }
+}
+
 .secAbout {
   display: flex;
   flex-direction: column;
@@ -67,7 +83,7 @@ body {
   align-items: center;
 
   @include media.laptop {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
     align-items: left;
   }
@@ -125,11 +141,11 @@ h4 {
 button {
   background-color: white;
   border: 2px solid grey;
-  border-radius: 15%;
+  border-radius: 10%;
   font-weight: 700;
 }
 
-.secProjects ul {
+.secProjects {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -146,10 +162,10 @@ button {
 .secProjects {
   width: 80vw;
   margin: 0 auto;
-  border: 2px solid red;
-  li {
-    width: 5vw;
-    height: 5vw;
+
+  img {
+    width: 20vw;
+    height: 20vw;
     border: 2px solid black;
     border-radius: 10%;
   }
@@ -201,9 +217,10 @@ button {
     width: 50%;
   }
   .icons img {
-    height: 50px;
-    width: 50px;
+    height: 6rem;
+    width: 6rem;
     border-radius: 50%;
+    object-fit: fill;
   }
   .email {
     margin: auto;
