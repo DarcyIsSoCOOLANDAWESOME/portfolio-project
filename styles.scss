@@ -69,7 +69,6 @@ button {
   top: 0;
   background-color: white;
   border-bottom: 2px solid black;
-
   @include media.phone {
     display: none;
   }
@@ -83,9 +82,6 @@ button {
   div {
     font-weight: 600;
   }
-  //   a :hover {
-  //     color: red;
-  //   }
 }
 
 //About Section
@@ -104,13 +100,16 @@ button {
   justify-content: center;
   align-items: center;
   p {
-    font-size: large;
-    margin-left: 2rem;
+    margin: 1em 2em;
+    @include media.laptop {
+      font-size: 1.5em;
+    }
+    @include media.ipad {
+      font-size: medium;
+    }
   }
   h2 {
-    @include media.laptop {
-      margin-left: 20%;
-    }
+    text-align: center;
   }
   @include media.laptop {
     flex-direction: column;
@@ -135,8 +134,23 @@ h4 {
   border-radius: 10%;
   @include media.laptop {
     float: left;
-    width: 30rem;
-    height: 30rem;
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+  }
+}
+
+.imgMeMuscles {
+  border-radius: 10%;
+  width: 30vw;
+  height: 30vw;
+  float: right;
+
+  @include media.phone {
+    display: none;
+  }
+  @include media.ipad {
+    display: none;
   }
 }
 
@@ -236,24 +250,22 @@ h4 {
 //FOOTER STUFF!!!
 .footer {
   height: 10rem;
-
   background-color: black;
   color: white;
-
   .icons {
     margin: auto;
     width: 50%;
   }
   .icons img {
-    height: 7rem;
-    width: 7rem;
+    margin-top: 2rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     object-fit: fill;
   }
 
   .email {
     margin: auto;
-    width: 50%;
     color: white;
     font-size: larger;
   }

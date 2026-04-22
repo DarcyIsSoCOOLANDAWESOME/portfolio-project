@@ -107,13 +107,20 @@ button {
   align-items: center;
 }
 .secAbout p {
-  font-size: large;
-  margin-left: 2rem;
+  margin: 1em 2em;
 }
 @media only screen and (min-width: 641px) {
-  .secAbout h2 {
-    margin-left: 20%;
+  .secAbout p {
+    font-size: 1.5em;
   }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .secAbout p {
+    font-size: medium;
+  }
+}
+.secAbout h2 {
+  text-align: center;
 }
 @media only screen and (min-width: 641px) {
   .secAbout {
@@ -143,8 +150,26 @@ button {
 @media only screen and (min-width: 641px) {
   .imgMe {
     float: left;
-    width: 30rem;
-    height: 30rem;
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+  }
+}
+
+.imgMeMuscles {
+  border-radius: 10%;
+  width: 30vw;
+  height: 30vw;
+  float: right;
+}
+@media only screen and (max-width: 640px) {
+  .imgMeMuscles {
+    display: none;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .imgMeMuscles {
+    display: none;
   }
 }
 
@@ -247,14 +272,16 @@ button {
   width: 50%;
 }
 .footer .icons img {
-  height: 7rem;
-  width: 7rem;
+  margin-top: 2rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   object-fit: fill;
 }
 .footer .email {
   margin: auto;
-  width: 50%;
   color: white;
   font-size: larger;
 }
+
+/*# sourceMappingURL=styles.css.map */
