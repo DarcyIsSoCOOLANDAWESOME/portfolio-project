@@ -28,11 +28,8 @@ a {
   text-decoration: none;
 }
 
+button:hover,
 a:hover {
-  color: red;
-}
-
-button:hover {
   color: red;
   cursor: pointer;
 }
